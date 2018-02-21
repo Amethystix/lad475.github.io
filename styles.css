@@ -1,9 +1,20 @@
+@font-face{
+	font-family: Jonah;
+	src: url('Jonah-Regular.ttf');
+}
 .content-box{
 	border-radius: 20px;
 	background-color: #4f0099;
 }
-#page{
+
+body{
 	background-color: #f3e6ff;
-	height: 100%;
-	width: 100%;
+	font-family: 'Jonah';
+	margin: auto;
+}
+#header{
+
+}
+#content{
+	padding: 25px;
 }
