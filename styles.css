@@ -5,16 +5,21 @@
 .content-box{
 	border-radius: 20px;
 	padding: 5px;
-	/*float: left;*/
-	width: 300px;
-	height:200px;
+	width: 350px;
+	height:275px;
 	color: white;
+	box-shadow: 8px 12px #28004d;
+	border: 5px solid #F3E6FF;
+}
+.spacer{
+	width:10px;
 }
 .open{
 	background-color: #6900cc;
 }
 .closed{
 	background-color: #350066;
+	font-size: 50px;
 }
 
 body{
@@ -27,13 +32,33 @@ body{
 
 }
 #content{
-	padding: 25px;
+	
 }
 #box-holder{
-	margin: auto;
-	text-align: center;
-	width: 90%;
+	width: 95%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
+	align-content: space-between;
+}
+#box-holder > * {
+  margin: 1em 0;
+}
+#greetingBox{
+	width: 30%;
+}
+#aboutBox{
+	width: 60%;
+}
+#projectsBox{
+	width: 90%;
+}
+#resumeBox{
+	width: 30%;
+}
+#goalsBox{
+	width: 60%;
+}
+#linksBox{
+	width: 90%;
 }
