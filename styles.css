@@ -10,12 +10,16 @@
 	color: white;
 	box-shadow: 8px 12px #28004d;
 	border: 5px solid #F3E6FF;
+	-webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    transition: width 1s ease;
 }
 .spacer{
 	width:10px;
 }
 .open{
 	background-color: #6900cc;
+	width: 100%;
 }
 .closed{
 	background-color: #350066;
@@ -36,6 +40,8 @@ body{
 }
 #box-holder{
 	width: 95%;
+	margin: auto;
+	text-align: center;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -45,20 +51,20 @@ body{
   margin: 1em 0;
 }
 #greetingBox{
-	width: 30%;
+	
 }
 #aboutBox{
-	width: 60%;
+	
 }
 #projectsBox{
-	width: 90%;
+	
 }
 #resumeBox{
-	width: 30%;
+	
 }
 #goalsBox{
-	width: 60%;
+	
 }
 #linksBox{
-	width: 90%;
+	
 }

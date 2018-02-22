@@ -16,7 +16,19 @@ function divListener(){
 			evt.preventDefault();
 			divs[i].style['background-color'] = "#350066";
 		});
+		divs[i].addEventListener('click', function(evt){
+			evt.preventDefault();
+			openDiv(divs[i]);
+		});
 	}
 }
-
+function openDiv(element){
+	// let start = parseInt(element.getBoundingClientRect().width);
+	// for(let i = start; i < document.getElementById("box-holder").getBoundingClientRect().width-5; i+= .1){
+	// 	element.style.width = "" + i + "px";
+	// }
+	element.classList.remove("closed");
+	element.classList.add("open");
+	
+}
 document.addEventListener("DOMContentLoaded", main);
