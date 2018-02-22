@@ -8,19 +8,23 @@ function divListener(){
 	//the user hovers over a div, to flip it around
 	let divs = document.querySelectorAll(".closed");
 	for(let i = 0; i < divs.length; i++){
-		divs[i].addEventListener("mouseover", function(evt){
-			evt.preventDefault();
-			divs[i].style['background-color'] = "#6900CC";
-		});
-		divs[i].addEventListener('mouseout', function(evt){
-			evt.preventDefault();
-			divs[i].style['background-color'] = "#350066";
-		});
-		divs[i].addEventListener('click', function(evt){
-			evt.preventDefault();
-			openDiv(divs[i]);
-		});
+		divs[i].addEventListener("mouseover", hoverClosed);
+		divs[i].addEventListener('mouseout', removeHoverClosed);
+		divs[i].addEventListener('click', clickClosed);
 	}
+}
+function clickClosed(evt){
+	evt.preventDefault();
+	openDiv(evt.target);
+}
+function removeHoverClosed(evt){
+	evt.preventDefault();
+	evt.target.style['background-color'] = "";
+	console.log('hey');
+}
+function hoverClosed(evt){
+	evt.preventDefault();
+	evt.target.style['background-color'] = "#6900CC";
 }
 function openDiv(element){
 	// let start = parseInt(element.getBoundingClientRect().width);
@@ -29,6 +33,9 @@ function openDiv(element){
 	// }
 	element.classList.remove("closed");
 	element.classList.add("open");
-	
+	element.removeEventListener('click', clickClosed, false);
+	element.removeEventListener('mouseover', hoverClosed, false);
+	element.removeEventListener('mouseout', removeHoverClosed, false);
+	element.style['background-color'] = "";
 }
 document.addEventListener("DOMContentLoaded", main);
