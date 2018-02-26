@@ -2,7 +2,6 @@
 
 function main(){
 	divListener();
-	console.log(window.innerWidth);
 }
 function divListener(){
 	//Write listeners for when
@@ -16,16 +15,22 @@ function divListener(){
 }
 function clickClosed(evt){
 	evt.preventDefault();
-	openDiv(evt.target);
+	openDiv(evt.currentTarget);
 }
 function removeHoverClosed(evt){
 	evt.preventDefault();
-	evt.target.style['background-color'] = "";
-	console.log('hey');
+	evt.currentTarget.style['background-color'] = "";
 }
 function hoverClosed(evt){
 	evt.preventDefault();
-	evt.target.style['background-color'] = "#6900CC";
+	evt.currentTarget.style['background-color'] = "#6900CC";
+}
+function clickOpen(evt){
+	evt.preventDefault();
+	closeDiv(evt.currentTarget);
+}
+function closeDiv(element){
+
 }
 function openDiv(element){
 	// let start = parseInt(element.getBoundingClientRect().width);
