@@ -9,6 +9,7 @@ function divListener(){
 	//the user hovers over a div, to flip it around
 	let divs = document.querySelectorAll(".closed");
 	for(let i = 0; i < divs.length; i++){
+		divs[i].textContent = window.innerWidth;
 		divs[i].addEventListener("mouseover", hoverClosed);
 		divs[i].addEventListener('mouseout', removeHoverClosed);
 		divs[i].addEventListener('click', clickClosed);
