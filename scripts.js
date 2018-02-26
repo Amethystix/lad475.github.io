@@ -2,6 +2,7 @@
 
 function main(){
 	divListener();
+	console.log(window.innerWidth);
 }
 function divListener(){
 	//Write listeners for when
