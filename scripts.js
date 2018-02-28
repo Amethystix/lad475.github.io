@@ -43,5 +43,12 @@ function openDiv(element){
 	element.removeEventListener('mouseover', hoverClosed, false);
 	element.removeEventListener('mouseout', removeHoverClosed, false);
 	element.style['background-color'] = "";
+
+	console.log(element.textContent.trim());
+	if(element.textContent.trim() == "Hello!"){
+		console.log("yup");
+		element.innerHTML = `<h2>${element.textContent.trim()}</h2>`;
+		element.innerHTML += "<p>I'm Lauren, an aspiring web developer at New York University majoring in Computer Science, minoring in Web Programming and Applications, and looking to earn my MS degree in Computer Science.</p>"
+	}
 }
 document.addEventListener("DOMContentLoaded", main);

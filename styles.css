@@ -46,6 +46,13 @@
 .open{
 	background-color: #6900cc;
 	width: 100%;
+	text-align: left;
+}
+.open > h2{
+	text-align: center;
+}
+.open > p{
+	font-family: "sans-serif", "Arial";
 }
 .closed{
 	background-color: #350066;
